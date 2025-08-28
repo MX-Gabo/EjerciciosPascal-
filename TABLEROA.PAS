@@ -2,7 +2,7 @@ program TableroAjedrez;
 uses Crt;
 
 const
-    letras: array[1..8] of string = ('A ','B ','C ','D ','E ','F ','G ','H ');
+    letras: array[1..8] of string = ( ' A',' B',' C',' D',' E',' F',' G',' H');
 
 var
   tablero: array[1..8, 1..8] of string;
@@ -21,7 +21,7 @@ begin
   end;
 
   { Imprimir letras de columnas }
-  write(' ');  { margen izquierdo }
+  write('  ');  { margen izquierdo }
   for j := 1 to 8 do
     write( letras[j]);
   writeln;
@@ -36,9 +36,9 @@ begin
   end;
 
   { Imprimir letras de columnas al final }
-  write('   ');
+  write('  ');
   for j := 1 to 8 do
-    write(' ', letras[j], ' ');
+    write( letras[j]);
   writeln;
 
   readln;

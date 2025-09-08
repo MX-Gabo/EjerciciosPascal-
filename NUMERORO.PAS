@@ -11,14 +11,13 @@ var
   entrada: string;
   num, i, code: integer;
 
-{ Convierte una cadena a minúsculas (para TP, sin SysUtils) }
 function ToLowerCase(s: string): string;
 var
   j: integer;
 begin
   for j := 1 to Length(s) do
     if (s[j] >= 'A') and (s[j] <= 'Z') then
-      s[j] := Chr(Ord(s[j]) + 32); { Convierte a minúscula }
+      s[j] := Chr(Ord(s[j]) + 32); 
   ToLowerCase := s;
 end;
 
@@ -29,7 +28,7 @@ begin
 
     if ToLowerCase(entrada) <> 'exit' then
     begin
-      Val(entrada, num, code);   { convierte la cadena a número }
+      Val(entrada, num, code);   
 
       if code <> 0 then
         Writeln('Entrada invalida, intenta de nuevo.')
@@ -54,3 +53,4 @@ begin
     end;
   until ToLowerCase(entrada) = 'exit';
 end.
+
